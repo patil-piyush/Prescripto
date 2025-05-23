@@ -11,8 +11,7 @@ import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
 import './index.css';
 
-
-const App = () => {
+const App = () => { 
   return (
     <div className='mx-4 sm:mx-[10%]'>
       <Navbar/>
