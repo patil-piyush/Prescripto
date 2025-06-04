@@ -10,6 +10,7 @@ import MyProfile from './pages/MyProfile.jsx'
 import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
 import './index.css';
+import Footer from './components/Footer.jsx'
 
 const App = () => { 
   return (
@@ -26,7 +27,7 @@ const App = () => {
         <Route exact path='/my-appointments' element={<MyAppointments/> } />
         <Route exact path='/appointments/:docId' element={<Appointments/> } />
       </Routes>      
-      
+      <Footer/>
     </div>
   )
 }
