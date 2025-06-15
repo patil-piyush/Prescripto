@@ -11,23 +11,27 @@ import { Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
 import './index.css';
 import Footer from './components/Footer.jsx'
+import { ToastContainer } from 'react-toastify';
 
-const App = () => { 
+
+const App = () => {
   return (
     <div className='mx-4 sm:mx-[10%]'>
-      <Navbar/>
-      <Routes>
-        <Route exact path='/' element={<Home/>} />
-        <Route exact path='/doctors' element={<Doctors/>} />
-        <Route exact path='/doctors/:speciality' element={<Doctors/>} />
-        <Route exact path='/login' element={<Login/>} />
-        <Route exact path='/about' element={<About/>} />
-        <Route exact path='/contact' element={<Contact/> } />
-        <Route exact path='/my-profile' element={<MyProfile/> } />
-        <Route exact path='/my-appointments' element={<MyAppointments/> } />
-        <Route exact path='/appointments/:docId' element={<Appointments/> } />
-      </Routes>      
-      <Footer/>
+      <ToastContainer/>
+        <Navbar />
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route exact path='/doctors' element={<Doctors />} />
+          <Route exact path='/doctors/:speciality' element={<Doctors />} />
+          <Route exact path='/login' element={<Login />} />
+          <Route exact path='/about' element={<About />} />
+          <Route exact path='/contact' element={<Contact />} />
+          <Route exact path='/my-profile' element={<MyProfile />} />
+          <Route exact path='/my-appointments' element={<MyAppointments />} />
+          <Route exact path='/appointments/:docId' element={<Appointments />} />
+        </Routes>
+        <Footer />
+      
     </div>
   )
 }

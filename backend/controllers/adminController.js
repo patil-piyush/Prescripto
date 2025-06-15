@@ -86,7 +86,19 @@ const loginAdmin = async (req, res) => {
     }
 }
 
+//API to get all doctors data
+const allDoctors = async (req,res) => {
+    try {
+        const doctors = await doctorModel.find({}).select('-password')
+        res.json({success:true, doctors})
+    } catch (error) {
+        console.log(error)
+        return res.json({ success: false, message: error.message })
+    }
+}
+
 module.exports = {
     addDoctor,
-    loginAdmin
+    loginAdmin,
+    allDoctors
 }
